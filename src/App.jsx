@@ -26,19 +26,19 @@ function App() {
 
   return (
     <>
-      <div style={{border:"2px solid black"}}>
+      <div style={{border:"2px solid black"}} className='container mt-4'>
         <SignatureCanvas 
           canvasProps={{width:1000, height: 500, className:"sigCanvas"}}
           ref={data => setSign(data)}
           penColor='black'
         />
       </div>
-      <div>
-        <button onClick={handleClear}>Clear</button>
-        <button onClick={handleSave}>Save</button>
+      <div className='container text-center'>
+        <button className="btn btn-outline-primary text-center m-5" onClick={handleClear}>Clear</button>
+        <button className="btn btn-outline-primary text-center m-5" onClick={handleSave}>Save</button>
       </div>
-      <div>
-        <img src={url} alt="Signature" />
+      <div className='container mt-4'>
+        <img src={url} alt="Signature"style={{width:"200px" ,height:"200px"}}/>
       </div>
     </>
   );
